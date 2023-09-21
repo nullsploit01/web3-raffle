@@ -47,9 +47,10 @@
     "typescript": "^5.2.2"
   },
   "lint-staged": {
-    "**/*.{js,ts}": [
+    "**/*.{js,ts,sol}": [
       "eslint \"./**/*.{js,ts}\" --fix",
-      "prettier --write \"./**/*.{js,ts}\""
+      "prettier --write \"./**/*.{js,ts}\"",
+      "solhint \"./contracts/**/*.sol\" --fix"
     ]
   }
 }

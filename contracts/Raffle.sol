@@ -15,6 +15,7 @@ contract Raffle {
     if (msg.value < i_ticketPrice) {
       revert Raffle__NotEnoughEth();
     }
+    s_participants.push(payable(msg.sender));
   }
 
   function getTicketPrice() public view returns (uint256) {
